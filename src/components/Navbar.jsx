@@ -51,7 +51,7 @@ const Navbar = () => {
               Profile
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -62,7 +62,7 @@ const Navbar = () => {
             >
               About
             </NavLink>
-          </li>
+          </li> */}
         </ul>
 
         <div className="flex space-x-6 items-center">
