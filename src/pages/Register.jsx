@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { register } from "../services/authService";
+import { FiLoader } from "react-icons/fi";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
