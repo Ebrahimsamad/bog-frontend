@@ -6,7 +6,7 @@ const PublicRoute = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext);
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="/" />;
   }
 
   return children;

@@ -41,7 +41,7 @@ const LoginPage = () => {
         const { email, password } = data;
         const response = await login({ email, password });
         loginContext(response.data.token, response.data.user);
-        navigate("/dashboard");
+        navigate("/");
       } catch (error) {
         setError("Invalid login credentials");
       } finally {
