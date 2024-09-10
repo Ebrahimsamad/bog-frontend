@@ -32,14 +32,6 @@ function App() {
               </PublicRoute>
             }
           />
-          {/* <Route
-            path="/dashboard"
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          /> */}
           <Route
             path="/"
             element={
@@ -48,6 +40,14 @@ function App() {
               </PrivateRoute>
             }
           />
+          {/* <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          /> */}
           <Route
             path="/profile"
             element={
