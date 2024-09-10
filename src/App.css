@@ -1,0 +1,36 @@
+.container {
+  background-color: #141414;
+  color: #fff;
+}
+
+textarea,
+.input {
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+}
+
+.file-input {
+  color: white;
+}
+
+.btn-primary {
+  background-color: #e50914;
+  border: none;
+}
+
+.bg-gray-800 {
+  background-color: #333333;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
