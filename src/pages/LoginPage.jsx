@@ -36,18 +36,16 @@ const LoginPage = () => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    setTimeout(async () => {
-      try {
-        const { email, password } = data;
-        const response = await login({ email, password });
-        loginContext(response.data.token, response.data.user);
-        navigate("/");
-      } catch (error) {
-        setError("Invalid login credentials");
-      } finally {
-        setLoading(false);
-      }
-    }, 1000);
+    try {
+      const { email, password } = data;
+      const response = await login({ email, password });
+      loginContext(response.data.token, response.data.user);
+      navigate("/");
+    } catch (error) {
+      setError("Invalid login credentials");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
