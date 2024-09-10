@@ -7,15 +7,19 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       await register({ username, email, password });
       navigate("/login");
     } catch (error) {
       setError("Failed to create account");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -55,12 +59,24 @@ const RegisterPage = () => {
               required
             />
           </div>
-          <button
-            type="submit"
-            className="w-full bg-yellow-500 text-gray-900 font-semibold p-3 rounded-lg hover:bg-yellow-600 transition duration-300"
-          >
-            Sign Up
-          </button>
+          <div className="flex justify-center">
+            {loading ? (
+              <button
+                type="button"
+                className="w-full bg-yellow-500 text-gray-900 font-semibold p-3 rounded-lg flex items-center justify-center hover:bg-yellow-600 transition duration-300"
+                disabled
+              >
+                <FiLoader className="animate-spin text-2xl" />
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="w-full bg-yellow-500 text-gray-900 font-semibold p-3 rounded-lg hover:bg-yellow-600 transition duration-300"
+              >
+                Sign Up
+              </button>
+            )}
+          </div>
         </form>
         <p className="mt-4">
           Already have an account?{" "}

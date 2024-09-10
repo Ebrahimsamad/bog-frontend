@@ -60,7 +60,7 @@ const Dashboard = () => {
       };
 
       const { data } = await createPost(postData);
-      console.log("Created post:", data);
+      // console.log("Created post:", data);
       setPosts((prevPosts) => [data, ...prevPosts]);
       setNewPost("");
       setImage(null);
