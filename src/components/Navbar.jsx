@@ -90,9 +90,7 @@ const Navbar = () => {
               <FiLoader className="ml-6 text-yellow-500 animate-spin text-2xl" />
             ) : (
               <div className="ml-6 flex items-center space-x-2">
-                <span className="text-gray-100 font-medium">
-                  {user?.name} {/* Display the username */}
-                </span>
+                <span className="text-gray-100 font-medium">{user?.name}</span>
                 <button
                   onClick={handleLogout}
                   className="text-gray-100 hover:text-yellow-500 transition duration-300 text-lg font-medium"
