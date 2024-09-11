@@ -238,16 +238,18 @@ const Dashboard = () => {
         <main className="w-full max-w-2xl mt-5 px-4">
           {/* Post Creation */}
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex gap-10 mb-5 justify-between">
               <FaUserCircle size={50} className="text-gray-500" />
+              <input
+                type="text"
+                className="w-full  bg-gray-700 text-gray-100 border-none mb-3 p-3 rounded-lg placeholder-gray-500"
+                placeholder="What's on your mind?"
+                value={newPost}
+                onChange={(e) => setNewPost(e.target.value)}
+              />
+            </div>
+            <div className="flex items-center space-x-4">
               <div className="flex-grow">
-                <input
-                  type="text"
-                  className="w-full bg-gray-700 text-gray-100 border-none mb-3 p-3 rounded-lg placeholder-gray-500"
-                  placeholder="What's on your mind?"
-                  value={newPost}
-                  onChange={(e) => setNewPost(e.target.value)}
-                />
                 {imagePreview && (
                   <div className="mb-4">
                     <img
